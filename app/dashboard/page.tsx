@@ -71,8 +71,17 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { siteConfig } from '@/config/site';
+import { Metadata } from 'next';
 
-export default function Criação() {
+export const metadata: Metadata = {
+  title: {
+    default: 'Dashboard',
+    template: `%s - ${siteConfig.name}`,
+  },
+};
+
+export default function AccountCreation() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
       <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
@@ -266,7 +275,10 @@ export default function Criação() {
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
           <div className="grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2">
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4">
-              <Card className="sm:col-span-2" x-chunk="dashboard-05-chunk-0">
+              <Card
+                className="sm:col-span-2 cursor-default"
+                x-chunk="dashboard-05-chunk-0"
+              >
                 <CardHeader className="pb-3">
                   <CardTitle>🟢 Samara Oliveira</CardTitle>
                   <CardDescription className="max-w-lg text-balance leading-relaxed">
@@ -277,7 +289,7 @@ export default function Criação() {
                   <Button>Criar outra Conta</Button>
                 </CardFooter>
               </Card>
-              <Card x-chunk="dashboard-05-chunk-1">
+              <Card x-chunk="dashboard-05-chunk-1" className="cursor-default">
                 <CardHeader className="pb-2">
                   <CardDescription>Esta semana</CardDescription>
                   <CardTitle className="text-4xl">50 contas</CardTitle>
@@ -291,7 +303,7 @@ export default function Criação() {
                   <Progress value={25} aria-label="25% increase" />
                 </CardFooter>
               </Card>
-              <Card x-chunk="dashboard-05-chunk-2">
+              <Card x-chunk="dashboard-05-chunk-2" className="cursor-default">
                 <CardHeader className="pb-2">
                   <CardDescription>Este mês</CardDescription>
                   <CardTitle className="text-4xl">137 contas</CardTitle>
@@ -353,7 +365,7 @@ export default function Criação() {
                 </div>
               </div>
               <TabsContent value="today">
-                <Card x-chunk="dashboard-05-chunk-3">
+                <Card x-chunk="dashboard-05-chunk-3" className="cursor-default">
                   <CardHeader className="px-7">
                     <CardTitle>Contas</CardTitle>
                     <CardDescription>
@@ -377,7 +389,7 @@ export default function Criação() {
                           <TableHead className="text-right">Número</TableHead>
                         </TableRow>
                       </TableHeader>
-                      <TableBody>
+                      <TableBody className="cursor-pointer">
                         <TableRow className="bg-accent">
                           <TableCell>
                             <div className="font-medium">Samara Oliveira</div>
@@ -409,7 +421,7 @@ export default function Criação() {
                         </TableRow>
                         <TableRow>
                           <TableCell>
-                            <div className="font-medium">Samara Oliveira</div>
+                            <div className="font-medium">Vitória Nunes</div>
                             <div className="hidden text-sm text-muted-foreground md:inline">
                               Luan Felipe Bischoff
                             </div>
@@ -438,7 +450,7 @@ export default function Criação() {
                         </TableRow>
                         <TableRow>
                           <TableCell>
-                            <div className="font-medium">Samara Oliveira</div>
+                            <div className="font-medium">Júlia Araujo</div>
                             <div className="hidden text-sm text-muted-foreground md:inline">
                               Luan Felipe Bischoff
                             </div>
@@ -467,7 +479,7 @@ export default function Criação() {
                         </TableRow>
                         <TableRow>
                           <TableCell>
-                            <div className="font-medium">Samara Oliveira</div>
+                            <div className="font-medium">Rafaela Oliveira</div>
                             <div className="hidden text-sm text-muted-foreground md:inline">
                               Luan Felipe Bischoff
                             </div>
@@ -496,7 +508,7 @@ export default function Criação() {
                         </TableRow>
                         <TableRow>
                           <TableCell>
-                            <div className="font-medium">Samara Oliveira</div>
+                            <div className="font-medium">Giovana Machado</div>
                             <div className="hidden text-sm text-muted-foreground md:inline">
                               Luan Felipe Bischoff
                             </div>
