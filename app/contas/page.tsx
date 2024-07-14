@@ -46,6 +46,7 @@ import { siteConfig } from "@/config/site";
 import { Metadata } from "next";
 import AsideMenu from "@/components/aside-menu";
 import NavMenu from "@/components/nav-menu";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
@@ -74,7 +75,9 @@ export default function AccountCreation() {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
-                  <Button>Criar outra Conta</Button>
+                  <Link href="criar-conta">
+                    <Button>Criar outra Conta</Button>
+                  </Link>
                 </CardFooter>
               </Card>
               <Card x-chunk="dashboard-05-chunk-1" className="cursor-default">
